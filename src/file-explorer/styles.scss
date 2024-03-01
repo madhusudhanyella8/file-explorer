@@ -1,0 +1,98 @@
+.folder-tree {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: min-content;
+  .search-bar {
+    padding: 4px 12px;
+    border: 1px solid #8c8cca;
+    border-radius: 8px;
+    width: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .search-input {
+      outline: none;
+      border: none;
+      padding: 6px 0px;
+    }
+  }
+  .folder-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: min-content;
+    .folder {
+      cursor: default;
+      width: min-content;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      padding: 4px 12px;
+      .name {
+        text-align: "left";
+        .highlight {
+          background-color: #fbfbaf;
+          border: 1px solid #dddd50;
+          border-radius: 4px;
+        }
+      }
+    }
+    .folder.hovered {
+      outline: 1px solid #30a1bd;
+      border-radius: 8px;
+    }
+    .folder.expandable {
+      cursor: pointer;
+    }
+    .expanded-content {
+      margin-left: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      width: min-content;
+      .file {
+        cursor: pointer;
+        width: min-content;
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        padding: 4px 12px;
+        .name {
+          text-align: left;
+          .highlight {
+            background-color: #fbfbaf;
+            border: 1px solid #dddd50;
+            border-radius: 4px;
+          }
+        }
+      }
+      .file.hovered {
+        outline: 1px solid #30a1bd;
+        border-radius: 8px;
+      }
+      .file.selected {
+        border-radius: 8px;
+        outline: 1px solid #30a1bd;
+        background-color: #f0f8fa;
+      }
+    }
+  }
+}
+
+.context-menu {
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #f6f1e9;
+  position: fixed;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  .action {
+    cursor: pointer;
+    &:hover {
+      font-weight: 800;
+      text-decoration: underline;
+    }
+  }
+}
